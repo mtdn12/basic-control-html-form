@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Simple Control Form</title>
+</head>
+
+<body>
+  <form class="exForm">
+    <div>
+      <label>Name</label>
+      <input type="text" name="name" placeholder="name" />
+      <span class="name-error"></span>
+    </div>
+    <div>
+      <label for="Email">Email</label>
+      <input type="email" name="email" placeholder="email" />
+      <span class="email-error"></span>
+    </div>
+    <div>
+      <label for="Password">Passowrd</label>
+      <input type="password" name="password" placeholder="password" />
+      <span class="password-error"></span>
+    </div>
+    <div>
+      <label>is Ok</label>
+      <input type="checkbox" name="isOk" />
+      <span class="isOk-error"></span>
+    </div>
+    <div>
+      <label>Car</label>
+      <select name="car">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+      </select>
+      <span class="car-error"></span>
+    </div>
+    <button type="submit" id="btnSubmit">Submit</button>
+  </form>
+  <form class="anotherForm">
+    <div>
+      <label>First Name</label>
+      <input type="text" name="firstName" placeholder="First Name" />
+      <span class="firstName-error"></span>
+    </div>
+    <div>
+      <label for="lastName">Last Name</label>
+      <input type="text" name="lastName" placeholder="Last Name" />
+      <span class="lastName-error"></span>
+    </div>
+    <div>
+      <label for="fullName">Passowrd</label>
+      <input type="text" name="fullName" placeholder="Full Name" />
+      <span class="fullName-error"></span>
+    </div>
+    <div>
+      <label>is Beautiful Name</label>
+      <input type="checkbox" name="isBeautifulName" />
+      <span class="isBeautifulName-error"></span>
+    </div>
+    <button type="submit" id="btnSubmit">Submit</button>
+  </form>
+  <script src="form.js"></script>
+</body>
+
+</html>
