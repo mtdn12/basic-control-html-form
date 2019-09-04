@@ -69,9 +69,12 @@ function formCreator(initialValues, className) {
     validate();
     if (isSubmitting) {
       fn(values);
-      alert("Submit success");
+      alert(`Submit success values is
+       ${JSON.stringify(values, null, 2)}`);
     } else {
-      alert("Have error");
+      alert(`Submit failure errors is
+        ${JSON.stringify(erros, null, 2)}
+      `);
     }
   };
   // Render text error in html (error element have class `fieldName-error`)
@@ -126,7 +129,7 @@ const validate = values => {
     errors.name = "this Field is required";
   } else {
     if (values.name.length < 2) {
-      errors.name = "Name must be atleast 10 characters";
+      errors.name = "Name must be atleast 2 characters";
     }
   }
   if (!values.email) {
@@ -155,9 +158,9 @@ form.addEventListener("submit", e => {
 
 // Create new form instane with initialValue and class name of form
 let initalValuesForm2 = {
-  firstName: "",
-  lastName: "",
-  fullName: "",
+  firstName: "Tuan",
+  lastName: "Vo",
+  fullName: "Vo Tuan",
   isBeautifulName: false
 };
 let anotherForm = formCreator(initalValuesForm2, "anotherForm");
