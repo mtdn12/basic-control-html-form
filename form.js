@@ -44,12 +44,20 @@ function formCreator(initialValues, className) {
     touched[name] = true;
     validate();
   };
+  // Initialize form values and event listener
   const initialize = () => {
     Object.keys(values).forEach(key => {
       let el = document.querySelector(`.${formClassName}  [name=${key}]`);
       el.addEventListener("change", handleChange);
       el.addEventListener("keyup", handleChange);
       el.addEventListener("blur", handleBlur);
+      el.value = values[key];
+    });
+  };
+  // Render form values
+  const rederFormValues = () => {
+    Object.keys(values).forEach(key => {
+      let el = document.querySelector(`.${formClassName}  [name=${key}]`);
       el.value = values[key];
     });
   };
@@ -78,10 +86,24 @@ function formCreator(initialValues, className) {
       }
     });
   };
+  // Set field value
+  const setFieldValue = (name, value) => {
+    values[name] = value;
+    touched[name] = true;
+    rederFormValues();
+    validate();
+  };
+  // Set field touch
+  const setFieldTouch = (name, isTouched, isValidate) => {
+    touched[name] = isTouched;
+    isValidate ? validate() : "";
+  };
   return {
     initialize,
     handleSubmit,
-    setValidation
+    setValidation,
+    setFieldValue,
+    setFieldTouch
   };
 }
 

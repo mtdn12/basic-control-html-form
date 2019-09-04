@@ -6,64 +6,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Simple Control Form</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="main.css" rel="stylesheet" />
 </head>
 
 <body>
+  <h4 class="form-title">First Form</h4>
   <form class="exForm">
-    <div>
+    <div class="form-group">
       <label>Name</label>
-      <input type="text" name="name" placeholder="name" />
-      <span class="name-error"></span>
+      <input type="text" name="name" class="form-control" placeholder="name" />
+      <div class="name-error invalid-feedback"></div>
     </div>
-    <div>
-      <label for="Email">Email</label>
-      <input type="email" name="email" placeholder="email" />
-      <span class="email-error"></span>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" name="email" class="form-control" placeholder="email" />
+      <div class="email-error invalid-feedback"></div>
     </div>
-    <div>
-      <label for="Password">Passowrd</label>
-      <input type="password" name="password" placeholder="password" />
-      <span class="password-error"></span>
+    <div class="form-group">
+      <label for="password">Passowrd</label>
+      <input type="password" name="password" class="form-control" placeholder="password" />
+      <span class="password-error invalid-feedback"></span>
     </div>
-    <div>
-      <label>is Ok</label>
-      <input type="checkbox" name="isOk" />
-      <span class="isOk-error"></span>
+    <div class="form-group">
+      <label for="isOk">is Ok</label>
+      <input type="checkbox" name="isOk" class="form-control" />
+      <div class="isOk-error invalid-feedback"></div>
     </div>
-    <div>
-      <label>Car</label>
-      <select name="car">
+    <div class="form-group">
+      <label for="car">Car</label>
+      <select name="car" class="form-control">
         <option value="volvo">Volvo</option>
         <option value="saab">Saab</option>
         <option value="mercedes">Mercedes</option>
         <option value="audi">Audi</option>
       </select>
-      <span class="car-error"></span>
+      <div class="car-error invalid-feedback"></div>
     </div>
-    <button type="submit" id="btnSubmit">Submit</button>
+    <button type="submit" id="btnSubmit" class="btn btn-primary">Submit</button>
   </form>
+  <h4 class="form-title">Second form</h4>
   <form class="anotherForm">
-    <div>
-      <label>First Name</label>
-      <input type="text" name="firstName" placeholder="First Name" />
-      <span class="firstName-error"></span>
+    <div class="form-group">
+      <label for="firstName">First Name</label>
+      <input type="text" name="firstName" class="form-control" placeholder="First Name" />
+      <div class="firstName-error invalid-feedback"></div>
     </div>
-    <div>
+    <div class="form-group">
       <label for="lastName">Last Name</label>
-      <input type="text" name="lastName" placeholder="Last Name" />
-      <span class="lastName-error"></span>
+      <input type="text" class="form-control" name="lastName" placeholder="Last Name" />
+      <div class="lastName-error invalid-feedback"></div>
     </div>
-    <div>
+    <div class="form-group">
       <label for="fullName">Passowrd</label>
-      <input type="text" name="fullName" placeholder="Full Name" />
-      <span class="fullName-error"></span>
+      <input type="text" class="form-control" name="fullName" placeholder="Full Name" />
+      <div class="fullName-error invalid-feedback"></div>
     </div>
-    <div>
-      <label>is Beautiful Name</label>
-      <input type="checkbox" name="isBeautifulName" />
-      <span class="isBeautifulName-error"></span>
+    <div class="form-group">
+      <label for="isBeautifulName">is Beautiful Name</label>
+      <input type="checkbox" class="form-control" name="isBeautifulName" />
+      <div class="isBeautifulName-error invalid-feedback"></div>
     </div>
-    <button type="submit" id="btnSubmit">Submit</button>
+    <button type="submit" id="btnSubmit" class="btn btn-primary">Submit</button>
   </form>
   <script src="form.js"></script>
 </body>

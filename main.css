@@ -1,0 +1,10 @@
+.exForm,
+.anotherForm {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.form-title {
+    text-align: center;
+    margin-top: 16px;
+}
